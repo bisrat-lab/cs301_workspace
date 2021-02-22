@@ -1,0 +1,6 @@
+• List 5 reserved keywords in JavaScript.
+	1. let
+	2. void
+	3. export
+	4. super
+	5. function 
