@@ -1,1 +1,2 @@
-console.log("Hello Tg")
+let x= 5;
+console.log(x)
