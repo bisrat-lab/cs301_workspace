@@ -1,6 +1,32 @@
+• If we use 'use strict' and if we assigne variable without using let keyword our program does not run it give us reference error.
+  
 • List 5 reserved keywords in JavaScript.
 	1. let
 	2. void
 	3. export
 	4. super
 	5. function 
+
+• similarity 
+A computer program is a specific sequence of instructions 
+An algorithm is a self-contained step-by-step set of operations to be performed to solve a specific problem.
+
+• different
+A program is a set of instructions in a computer understandable language to perform a certain task.
+An algorithm is a set of steps to perform a certain task.
+
+• Algorithm for adding two number 
+  1. Declare two variable to store the numbers
+  2. take the two varables and apply the formula for addition
+  3. add two numbers
+  4. Declare another variable to store the result.
+  5. print the result.
+
+• Algorithm to find maximum of two numbers
+  1. Get two numbers to compare
+  2. And compare the numbers using mathematical operator 
+      e.g if a > b then ; 
+  3. print a 
+  4. Otherwise 
+  5. print b 
+
