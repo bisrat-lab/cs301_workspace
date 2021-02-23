@@ -28,5 +28,20 @@ An algorithm is a set of steps to perform a certain task.
       e.g if a > b then ; 
   3. print a 
   4. Otherwise 
-  5. print b 
+  5. print b
 
+Quizzes. 
+
+1.-Both have a step by step of instruction 
+  -A program is a set of instructions in a computer understandable language to perform a certain task.
+An algorithm is a set of steps to perform a certain task and it writen in human understandable language.
+
+
+2. 
+Both use to store some data and reserve locaton.
+variables are used to store data or information and the value is changable.
+
+Constants are immutable variables which value cannot be changed
+
+3. The purpose of "use strict" is to indicate that the code should be executed in "strict mode
+4. yes there is an error in the code because y is a constant variable we can not channge the value of z 
