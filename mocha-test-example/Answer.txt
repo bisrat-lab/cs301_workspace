@@ -1,0 +1,21 @@
+Write the real rules implied by the irony examples
+1. Make the code as short as possible
+2. use single-letter variable names everywhere
+3. use abbreviations
+4. use the most abstracy words 
+5. use similar varable names
+6. smart synonyms using similar names for same thing like giving function name for display, like function displayMassage().
+7. reuse existing names for variables 
+8. use underscores before variable names.
+9.use nice or motivational words for declaration like superItem, megaElement it will definitely enlighten a reader.
+10. Use same names for variables inside and outside a function.
+
+
+➢ use single-letter variable names everywhere.
+ Meaning: when you declear a variable use singel letter variable names because they are hard to find them and chance them easly. 
+
+➢ If the team rules forbid the use of one-letter and vague names – shorten them, make abbreviations.
+when you declear a variable use abbreviations instead of using the full word to shorten every thing.
+
+➢ While choosing a name try to use the most abstract word
+Name a variable by its type: str, num
