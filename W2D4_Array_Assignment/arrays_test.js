@@ -61,17 +61,17 @@ describe("rotateRight", function () {
 
 describe("rotateNRight", function () {
     it("tests rotateNRight 3", function () {
-        assert.deepStrictEqual(arrays.rotateNRight([-1, -100, 1, 2, 3, -55], 3), [2, 3, -55, -1, -100, 1, 2]);
+        assert.deepStrictEqual(arrays.rotateNRight([-1, -100, 1, 2, 3, -55], 3), [2, 3, -55, -1, -100, 1]);
     });
 
     it("tests rotateNRight 4", function () {
-        assert.deepStrictEqual(arrays.rotateNRight([-10, 2, 3, 4, 20], 4), [2, 3, 4, 20, -10]);
+        assert.deepStrictEqual(arrays.rotateNRight([-10, 2, 3, 4, 20], 4), [20, -10, 2, 3, 4]);
     });
 });
 
 describe("filterRange", function () {
     it("tests [0, 100, 3, 6, -555], 6, 60", function () {
-        assert.strictDeepEqual(arrays.filterRange([0, 100, 3, 6, -555], 6, 120), [6, 100]);
+        assert.deepStrictEqual(arrays.filterRange([0, 100, 3, 6, -555], 6, 120), [6, 100]);
     });
 });
 
@@ -108,7 +108,7 @@ describe("enhancedIncludes", function () {
 describe("Matrix", function () {
     describe("matrixAddition", function () {
         it("matrix addition of [[0,1,2],[9,8,7]] and [[6,5,4], [3,4,5]]  should be [ [ 6, 6, 6 ], [ 12, 12, 12 ] ]", function () {
-            assert.deepStrictEqual(
+            assert.deepStrictEqual(arrays.
                 matrixAddition(
                     [
                         [0, 1, 2],

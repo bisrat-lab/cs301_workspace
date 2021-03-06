@@ -79,6 +79,20 @@ function rotateRight(arr){
 
 /**
  * 
+ * @param {array} arr is an array 
+ * @param {number} value is an index
+ * @returns {array} array
+ */
+function rotateNRight(arr,value){
+       
+    let aaa= arr.splice(value);
+    let bbb = arr.splice(0,value);
+return aaa.concat(bbb);
+
+ }
+
+/**
+ * 
  * @param {array} arr is an array
  * @returns {array} result 
  */
@@ -88,11 +102,73 @@ function reverse2String(arr){
     for(let i= arr.length - 1 ; i>=0 ;i--){
         copy.push(arr[i]);
     }
-    with_ = copy.join("_")
+    with_ = copy.join("_");
 
   return with_;
 }
-module.exports= {isArrayEqual, addends, getMiddle, rotateLeft, rotateRight, reverse2String};
 
-//[-1, -100, 1, 2, 3, -55]), [-100, 1, 2, 3, -55, -1]
-//[-1, -100, 1, 2, 3, -55]), [-55, -1, -100, 1, 2, 3,]
+/**
+ * @param {array} arr is an array
+ * @param {number} value is a value
+ * @returns {array} array
+ */
+function enhancedIncludes(arr, value){
+    let arr2 =[];
+        arr2.push(arr.includes(value));
+        arr2.push(arr.indexOf(value));
+        arr2.push(arr.lastIndexOf(value));
+
+        return arr2;    
+}
+
+/**
+ * 
+ * @param {array} arr is an array 
+ * @param {number} aaa is a number 
+ * @param {number} bbb is a number 
+ * @returns {arrar} array
+ */
+function filterRange(arr, aaa, bbb){
+    let newArr = [];
+       for(let i=0; i<arr.length; i++){
+           if(arr[i] >= aaa && arr[i]<= bbb){
+                newArr.unshift(arr[i]);
+           }
+       }
+        return newArr;
+}
+
+/**
+ * 
+ * @param {array} arr is an array 
+ * @returns {array} result 
+ */
+function filterPalindromes(arr){
+    let len= arr.length;
+        let newArr = [];
+       for(let i=0; i<len; i++){
+           if(arr[i] == arr[len - 1 -i]){
+                newArr.push(arr[i]);
+           }
+       }
+       return newArr;
+}
+
+/**
+ * 
+ * @param {array} arr1 is materx
+ * @param {array} arr2 is materx 
+ * @returns {array} result
+ */
+function matrixAddition(arr1 , arr2){
+    let sum = [];
+    for(let i=0; i<3; i++){
+        for(let j=0; j<3; j++){
+            sum.push(arr1[i][j] + arr2[i][j]);
+        }
+        return sum;
+    }
+}
+
+module.exports= {isArrayEqual, addends, getMiddle, rotateLeft, rotateRight, rotateNRight, reverse2String, filterRange, enhancedIncludes, filterPalindromes, matrixAddition};
+
