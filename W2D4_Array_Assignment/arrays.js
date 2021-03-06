@@ -61,6 +61,16 @@ function rotateLeft(arr){
     copy.push(arr[0]);
   return copy;
 }
+//==========other Solution ============
+//function rotateLeft(arr){
+//     let first = arr[0];
+//   for(let i=0; i<arr.length;i++){
+//       arr[i] = arr[i+1]
+//   }
+//   arr[arr.length - 1 ] = first;
+
+//   return arr
+//}
 
 /**
  * 
@@ -80,14 +90,16 @@ function rotateRight(arr){
 /**
  * 
  * @param {array} arr is an array 
- * @param {number} value is an index
+ * @param {number} n is an index
  * @returns {array} array
  */
-function rotateNRight(arr,value){
-       
-    let aaa= arr.splice(value);
-    let bbb = arr.splice(0,value);
-return aaa.concat(bbb);
+function rotateNRight(arr,n){
+       let nRotated = arr;
+       for(let i=1; i<=n; i++){
+           nRotated = rotateRight(arr);
+       }
+    
+return nRotated;
 
  }
 
@@ -169,6 +181,29 @@ function matrixAddition(arr1 , arr2){
         return sum;
     }
 }
+
+/**
+ * 
+ * @param {array} first array
+ * @param {array} second array
+ * @returns {array} array
+ */
+function mergeSorted(first, second) {
+    let merged = [];
+    while (first.length > 0 && second.length > 0) {
+        let smaller = first[0] < second[0] ? first : second;
+        merged.push(smaller.shift());
+    }
+
+    if (first.length > 0) {
+        merged.concat(first);
+    } else if (second.length > 0) {
+        merged.concat(second);
+    }
+    return merged;
+}
+
+console.log(mergeSorted([1,3,4,10,11],[1,3,4]))
 
 module.exports= {isArrayEqual, addends, getMiddle, rotateLeft, rotateRight, rotateNRight, reverse2String, filterRange, enhancedIncludes, filterPalindromes, matrixAddition};
 
