@@ -1,0 +1,6 @@
+1. How can you make a copy of an object?
+=>by creating another variable and assign the object variable then we have two variables each storing a reference to the same object.
+
+2.How do you remove the white spaces that may be at the beginning and ending of a string
+value?
+=> The trim() method will remove both leading and trailing whitespace from a string and return the result
