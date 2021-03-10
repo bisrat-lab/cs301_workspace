@@ -1,0 +1,44 @@
+"use strict";
+
+/**
+ * 
+ * @param {Number} num base 
+ * @param {Number} p expontent 
+ * @returns {Number} result
+ */
+function power(num ,p){
+    if(p === 0){
+        return 1;
+    }else{
+         return num * power(num, p-1);
+    }
+}
+
+/**
+ * 
+ * @param {Number} n number
+ * @returns {Number} result
+ */
+function countDigits(n){
+    let s = n.toString();
+    if(s===""){
+        return 0;
+    }else{
+        return 1 + countDigits(s.substr(1));
+    }
+}
+
+/**
+ * 
+ * @param {String} str is input string 
+ * @returns {String} reverse
+ */
+function reverse(str){
+    if(str===""){
+        return "";
+    }else{
+      return reverse(str.substr(1)) + str.charAt(0);
+    }
+   
+}
+module.exports= {power,countDigits, reverse};

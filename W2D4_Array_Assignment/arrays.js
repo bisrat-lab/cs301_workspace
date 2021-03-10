@@ -174,12 +174,15 @@ function filterPalindromes(arr){
  */
 function matrixAddition(arr1 , arr2){
     let sum = [];
-    for(let i=0; i<3; i++){
-        for(let j=0; j<3; j++){
-            sum.push(arr1[i][j] + arr2[i][j]);
+    for(let i=0; i<arr1.length; i++){
+        let row =[];
+        for(let j=0; j<arr1[i].length; j++){
+            row.push(arr1[i][j] + arr2[i][j]);
         }
-        return sum;
+        sum.push(row);
+        
     }
+    return sum;
 }
 
 /**
@@ -203,7 +206,26 @@ function mergeSorted(first, second) {
     return merged;
 }
 
-console.log(mergeSorted([1,3,4,10,11],[1,3,4]))
+console.log(mergeSorted([1,3,4,10,11],[1,3,4]));
+
+/**
+ * 
+ * @param {Array} arr arry 
+ * @returns {array} res
+ */
+function filiterNegative(arr){
+    let filtered =[];
+  
+    for(let n of arr){
+        if(n<0)
+        filtered.push(n);
+    }
+
+  return filtered;
+}
+////or
+let result = [-1,3-5,3,6,-7].filter((a)=>a>5);
+
 
 module.exports= {isArrayEqual, addends, getMiddle, rotateLeft, rotateRight, rotateNRight, reverse2String, filterRange, enhancedIncludes, filterPalindromes, matrixAddition};
 
