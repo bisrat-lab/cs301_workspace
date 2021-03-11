@@ -16,15 +16,29 @@ function power(num ,p){
 
 /**
  * 
+ * @param {Number} num number
+ * @returns {Number} result
+ */
+function countDigits(num){
+num = Math.abs(num);
+if(num<=9){
+    return 1;
+}else{
+    return 1 + countDigits(Math.floor(num/10));
+}
+}
+
+/**
+ * 
  * @param {Number} n number
  * @returns {Number} result
  */
-function countDigits(n){
+function countDigits2(n){
     let s = n.toString();
     if(s===""){
         return 0;
     }else{
-        return 1 + countDigits(s.substr(1));
+        return 1 + countDigits2(s.substr(1));
     }
 }
 
@@ -38,6 +52,7 @@ function reverse(str){
         return "";
     }else{
       return reverse(str.substr(1)) + str.charAt(0);
+      //return str[str.length -1]+ reverse(str.substr(0,str.length -1));
     }
    
 }
